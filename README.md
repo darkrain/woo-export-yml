@@ -1,6 +1,13 @@
-Plugin Name: Yandex Market Export for Woocommerce
-Plugin URI: http://progerlab.ru
-Description: Экспортирует товары с Woocommerce в Яндекс маркет
-Version: 3.1
-Author: Ivantsov Mikhail
-Author URI: mailto:m@progerlab.ru
+# Yandex Market Export for Woocommerce
+
+* Description: Экспортирует товары с Woocommerce в Яндекс маркет
+* Version: 3.1
+* Author: Ivantsov Mikhail
+
+
+# После установки
+
+* Перейти в  Настройки -> Постоянные ссылки и пересохранить настройки, надо чтобы вновь сгенерировался .htaccess фаил
+* Перейти в Woocommerce -> Настройки -> Экспорт в Yml, выставить нужные настройки
+* На странице настроек нажать обновить все товары. Процесс может занять какое то время. Это делается всегда первый раз и после того как меняете настройки, дальше будет все в режиме реального времени.
+* На странице настроек плагина вы получите ссылку на YML фаил в 2-х версиях, простой и gzip. 
