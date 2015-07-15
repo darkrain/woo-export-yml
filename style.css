@@ -1,0 +1,23 @@
+.woocommerce #mainform h3 {font-weight: bold;}
+.updated b, p b {font-weight: bold !important;}
+
+.woocommerce .form-table {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 35px !important;
+}
+
+#ymlprogress {display: none; line-height: 32px}
+#ymlprogress img{vertical-align: bottom; margin-right: 20px}
+#filter_settings td{ vertical-align: top; padding:0 0 15px 0;}
+#mainform label {font-weight: normal !important}
+#filter_settings strong {font-weight: bold; width:200px;}
+
+#updateoffers {color:#d54e21;}
+#updateoffers:hover {color:#d76037;}
+
+#yml-sources {margin-top:10px;} 
+#yml-sourcelist, #yml-sourcelist li {display: inline-block;}
+#yml-sourcelist li {padding-right: 10px; font-size: 16px}
+#yml-sourcelist .active a{text-decoration: none; color:#555; font-weight: bold;}
+.woocommerce form p.submit input[name="delete"] {background: red; border-color: red; box-shadow: none;}
+#add_source {margin-top: 8px;}
