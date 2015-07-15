@@ -3,7 +3,7 @@
 * Description: Экспортирует товары с Woocommerce в Яндекс маркет
 * Version: 3.1
 * Author: Ivantsov Mikhail
-
+* License: GLP v3
 
 # После установки
 
