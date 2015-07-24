@@ -25,23 +25,23 @@ class WooExportYmlFunctions
 		if( empty( $url  ) )
 			return false;
 
-		$_picture = explode('/', str_replace(home_url('/'), "", $url ));
-		$picture_a = array();
+		$_p = explode('/', str_replace(home_url('/'), "", $url ));
+		$_a = array();
 		
-		foreach($_picture as $v_ulr) {
-			$picture_a[] = rawurlencode($v_ulr);
+		foreach($_p as $v_ulr) {
+			$_a[] = rawurlencode($v_ulr);
 		}
 		
-		$_picture = home_url('/').implode('/', $picture_a );
+		$_u = home_url('/').implode('/', $picture_a );
 
-		return $_picture;
+		return $_u;
 	}
 
 	public static function del_symvol($str){
 
 		$tr = array(
-			";"=>" ",":"=>" ",">"=>" ","В«"=>" ",
-			"В»"=>" ","\""=>" ","@"=>" ","#"=>" ","$"=>" ",
+			";"=>" ",":"=>" ",">"=>" ","«"=>" ",
+			"»"=>" ","\""=>" ","@"=>" ","#"=>" ","$"=>" ",
 			"*" => " ", "%" => " ", "&" => " "
 	 	);
 
