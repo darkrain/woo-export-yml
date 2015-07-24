@@ -32,7 +32,7 @@ class WooExportYmlFunctions
 			$_a[] = rawurlencode($v_ulr);
 		}
 		
-		$_u = home_url('/').implode('/', $picture_a );
+		$_u = home_url('/').implode('/', $_a );
 
 		return $_u;
 	}
