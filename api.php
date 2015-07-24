@@ -348,7 +348,7 @@ class WooExportYmlApi
 			$image_id = get_post_thumbnail_id( $product->id );
 		}
 
-		$general_image = WooExportYmlFunctions::sanitize_picture( wp_get_attachment_url( $image_id ) );
+		$general_image = WooExportYmlFunctions::sanitize( wp_get_attachment_url( $image_id ) );
 
 
 
@@ -367,7 +367,7 @@ class WooExportYmlApi
 
 					if( !empty( $image[0] ) )
 
-					$images[] = WooExportYmlFunctions::sanitize_picture( $image[0] );
+					$images[] = WooExportYmlFunctions::sanitize( $image[0] );
 
 				}
 
@@ -376,22 +376,6 @@ class WooExportYmlApi
 
 		return $images;
 
-	}
-
-	function f( $url ){
-		if( empty( $url  ) )
-			return false;
-
-		$_p = explode('/', str_replace(home_url('/'), "", $url ));
-		$_a = array();
-		
-		foreach($_p as $v_ulr) {
-			$_a[] = rawurlencode($v_ulr);
-		}
-		
-		$_u = home_url('/').implode('/', $_a );
-
-		return $_u;
 	}
 
 	/*
@@ -440,7 +424,7 @@ class WooExportYmlApi
 
 
 		$params = array(
-			'url' 			=> $this->f(urldecode( esc_attr($product->get_permalink()) )),
+			'url' 			=> WooExportYmlFunctions::sanitize(urldecode( esc_attr($product->get_permalink()) )),
 			'price' 		=> $product->get_price(),
 			'currencyId'	=> 'RUR',
 			'categoryId' 	=> $cat,
