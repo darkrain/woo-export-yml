@@ -20,7 +20,7 @@ class WooExportYmlFunctions
 		return $text;
 	}
 
-	public static function sanitize_picture( $url ){
+	public static function sanitize( $url ){
 
 		if( empty( $url  ) )
 			return false;
@@ -37,21 +37,16 @@ class WooExportYmlFunctions
 		return $_picture;
 	}
 
-
-
 	public static function del_symvol($str){
 
 		$tr = array(
-			";"=>" ",":"=>" ",">"=>" ","«"=>" ",
-			"»"=>" ","\""=>" ","@"=>" ","#"=>" ","$"=>" ",
+			";"=>" ",":"=>" ",">"=>" ","В«"=>" ",
+			"В»"=>" ","\""=>" ","@"=>" ","#"=>" ","$"=>" ",
 			"*" => " ", "%" => " ", "&" => " "
 	 	);
 
 		return strtr($str,$tr);
 	}
-
-
-
 
 	public function print_gzencode_output( $filename ){ 
 
