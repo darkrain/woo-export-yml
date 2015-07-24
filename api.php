@@ -378,6 +378,22 @@ class WooExportYmlApi
 
 	}
 
+	function f( $url ){
+		if( empty( $url  ) )
+			return false;
+
+		$_p = explode('/', str_replace(home_url('/'), "", $url ));
+		$_a = array();
+		
+		foreach($_p as $v_ulr) {
+			$_a[] = rawurlencode($v_ulr);
+		}
+		
+		$_u = home_url('/').implode('/', $_a );
+
+		return $_u;
+	}
+
 	/*
 		Установка параметров для выгрузки Offer
 	*/
@@ -424,7 +440,7 @@ class WooExportYmlApi
 
 
 		$params = array(
-			'url' 			=> esc_attr($product->get_permalink()),
+			'url' 			=> $this->f(urldecode( esc_attr($product->get_permalink()) )),
 			'price' 		=> $product->get_price(),
 			'currencyId'	=> 'RUR',
 			'categoryId' 	=> $cat,
